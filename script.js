@@ -28,7 +28,7 @@ function imgDownload(){
 	);
 	document.getElementById("loading").innerText = ""
 
-	Promise.all(allimgs)
+	Promise.all(imgs)
 	   .then(() => {
 		   console.log("all img downloaded");
 	   }).catch(err => {
