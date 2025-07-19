@@ -7,9 +7,76 @@
 
   <body>
     <!-- the entire body must be written by student -->
-    <div id="output"></div>
-	  <div id="error"></div>
-	   <div id="loading"></div>
-    <script type="text/javascript" src="./script.js"></script>
-  </body>
+	<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Downloader with Promise.all</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+       
+    <div class="container">
+        <div class="controls">
+            <button id="download-images-button">Download Images</button>
+            <button id="reset-btn">Reset</button>
+        </div>
+        
+        <div class="status-container">
+            <div id="loading">
+                <div class="spinner"></div>
+                <p>Downloading images... Please wait</p>
+            </div>
+            
+            <div id="error"></div>
+        </div>
+        
+        <div id="output">
+            <div class="placeholder">
+                <p>No images loaded yet.</p>
+                <p>Click "Download Images" to start.</p>
+            </div>
+        </div>
+        
+        <div class="success-message" id="success-message">All images downloaded successfully!</div>
+        
+        <div class="tech-info">
+            <div class="tech-card">
+                <h3>Promise.all</h3>
+                <p>Downloads all images in parallel and waits for all to complete</p>
+            </div>
+            <div class="tech-card">
+                <h3>Loading State</h3>
+                <p>Shows spinner during download process</p>
+            </div>
+            <div class="tech-card">
+                <h3>Error Handling</h3>
+                <p>Displays errors for any failed downloads</p>
+            </div>
+        </div>
+        
+        <div class="instructions">
+            <h2>How It Works</h2>
+            <ul>
+                <li>Click "Download Images" to start downloading 3 sample images</li>
+                <li>A loading spinner will appear during the download process</li>
+                <li>If all images download successfully, they will display in the output area</li>
+                <li>If any image fails to download, an error message will appear</li>
+                <li>Use "Reset" to clear the output and try again</li>
+            </ul>
+        </div>
+    </div>
+    
+    <footer>
+        <p>Created with modern JavaScript techniques | Image Downloader Demo</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+
+
+
+	  
 </html>
